@@ -1,0 +1,2 @@
+class VicLgasController < ApplicationController
+end

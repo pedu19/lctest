@@ -1,0 +1,20 @@
+# SQLite. Versions 3.8.0 and up are supported.
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem "sqlite3"
+#
+
+development:
+  adapter: postgresql
+  database: lctest_dev
+  encoding: unicode
+  username: devlcuser
+  password: devlcuser
+  host: localhost
+  timeout: 5000
+  template: template_postgis
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: postgis://devlcuser:devlcuser@localhost/lctest_dev
+
+
